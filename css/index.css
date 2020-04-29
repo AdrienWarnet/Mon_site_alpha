@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+::selection {
+  background: #FD6154;
+  text-shadow: none;
+}
+
+html {
+    /*permet un défilement fluide avec les encres*/
+    scroll-behavior: smooth;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Varela Round", sans-serif;
+}
+
+header
+{
+    background:  linear-gradient(rgba(0,0,100,0.3),rgba(0,0,100,0.3)),url(../Images/fond.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+header:before, header:after {
+    display:block;
+    content:"."; 
+    clear:both;
+    height:0;
+    visibility:hidden;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+    padding-right: 42px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 32px;
+}
+  nav ul li a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+
+  }
+  .logo {
+        height: 40px;
+        float: left;
+        margin: 14px 48px;
+        color:#FD6154 ;
+  }
+
+  .acceuil h1{
+      font-size: 48px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 50px;
+      color: #fff;
+      padding-bottom: 0;
+      margin-bottom: 0;
+  }
+
+  .acceuil h2{
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 500px;
+      color: #fff;
+  }
+  .defilement{
+      text-align: center;
+      padding-bottom: 0;
+      padding-top:50px ;
+  }
+
+   
+  .menu a:hover{
+    color: #FD6154;
+  }
+
+  .defilement a {
+    border: 4px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: auto;
+    padding: 12px 32px 12px 82px;
+    position: relative;
+    text-decoration: none;
+}
+
+.defilement a .label,
+.defilement a .icon-arrow {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    perspective: 1000;
+}
+
+.defilement a .label {
+    display: inline-block;
+    transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.defilement a .icon-arrow {
+    fill: #fff;
+    height: 15px;
+    top: 17px;
+    transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1), opacity .4s cubic-bezier(0.86, 0, 0.07, 1);
+    width: 35px;
+}
+
+.defilement a .icon-arrow.before {
+    left: 32px;
+    margin-right: 15px;
+    position: absolute;
+    transform-origin: left center;
+}
+
+.defilement a .icon-arrow.after {
+    margin-left: 15px;
+    opacity: 0;
+    position: absolute;
+    right: 32px;
+    transform: translateX(75%) scaleX(0.1);
+    transform-origin: right center;
+}
+
+.defilement a:hover .label {
+    transform: translateX(-52px);
+}
+
+.defilement a:hover .icon-arrow.before {
+    opacity: 0;
+    transform: translateX(-75%) scaleX(0.1);
+}
+
+.defilement a:hover .icon-arrow.after {
+    opacity: 1;
+    transform: translateX(0) scaleX(1);
+}
+.defilement a:hover {
+  border-color: #FD6154;
+  color: #FD6154;
+}
+
+.defilement a:hover .icon-arrow.after{
+  fill: #FD6154;
+}
+
+
+.defilement a:active {
+    border-color: #FD6154;
+    color: #FD6154;
+}
+
+.defilement a:active .icon-arrow {
+    fill: #FD6154;
+}
+
+
+.description {
+    width: 80%;
+    margin: 50px auto;
+    color: #333;
+    text-align: justify;
+}
+
+nav.black {
+    background: #212529;;
+    z-index: 10; /*pour éviter la superposition vetical avec les indices on en met un au dessus de l'autre*/
+    height: 55px;
+}
+
+nav.black ul li {
+    display: inline-block;
+  margin: 0;
+  padding: 1px 32px;
+  padding-bottom: 20px;
+}
+
+nav.black ul li a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+
+  }
+
+  nav.black .logo{
+    margin: 1px 48px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .me {
+    width: 400px;
+    margin: 90px auto;
+  }
+  .me p,
+  .me h1 {
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  .me p {
+    font-weight: 200;
+  }
+  .me span {
+    font-weight: bold;
+  }
+  .social {
+    position: fixed;
+    top: 20px;
+  }
+ 
+
+ 
+  footer{
+    padding: 25px 0;
+    background-color: #212529;
+    text-align: center;
+    display: block;
+  }  
+
+.copy{
+  color:#FD6154 ;
+}
+
+.version{
+  color:#FD6154  ;
+}
+
+  footer a + a{
+    margin-left: 15px;    
+  }
+
+  .reseau a {
+    text-align: center;
+    color: #FD6154  ;
+  }
+  
+  .reseau a:hover{
+    color:#fff;
+  }
+
